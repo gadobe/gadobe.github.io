@@ -1,30 +1,20 @@
-I"þ
+I"Æ
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-          <a class="site-logo" href="/"><img src="/assets/images/apple-touch-icon.png" alt=""></a>
+          <a class="site-logo" href="/"><img src="/assets/images/gc-logo.jpg" alt=""></a>
         
         <a class="site-title" href="/">
           Garrett Chung
           <span class="site-subtitle">Martech, Adtech & CXM</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/about/" >About</a>
+              <a href="/about/" >About</a>
             </li><li class="masthead__menu-item">
               <a href="/year-archive/" >Posts</a>
-            </li><li class="masthead__menu-item">
-              <a href="/collection-archive/" >Collections</a>
-            </li><li class="masthead__menu-item">
-              <a href="/sitemap/" >Sitemap</a>
-            </li><li class="masthead__menu-item">
-              <a href="/" >Extra Menu Item 1</a>
-            </li><li class="masthead__menu-item">
-              <a href="/" >Extra Menu Item 2</a>
-            </li><li class="masthead__menu-item">
-              <a href="/" >Extra Menu Item Long Title</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
