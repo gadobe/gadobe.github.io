@@ -21,7 +21,6 @@ tags:
 
 last_modified_at: 2020-01-05T08:05:34-05:00
 ---
-# Adobe 2020 Checklist
 This post contains a 3-item checklist to consider to comply and ideas to future-proof your Adobe implementations in 2020.
 
 ## 1. DTM Update to Adobe Launch
@@ -58,8 +57,8 @@ This is required to ensure that:
 |Adobe Target (AT)|Request and implement first-party certificate for AT requests<sup>2</sup>.|
 
 ### Bookmarks:
-<sup>1</sup> [Use ECID library and CNAME tracking to extend visitor ID expiration (official documentation)](https://docs.adobe.com/content/help/en/id-service/using/reference/ecid-library-methods.html)\
-<sup>2</sup> [CNAME and Adobe Target (official documentation)](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/implement-cname-support-in-target.html)
+<sup>1</sup> [Use ECID library and CNAME tracking to extend visitor ID expiration (official documentation)](https://docs.adobe.com/content/help/en/id-service/using/reference/ecid-library-methods.html)<br/>
+<sup>2</sup> [CNAME and Adobe Target (official documentation)](https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/implement-cname-support-in-target.html)<br/>
 
 ## 3. Consent Management
 [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation), [CCPA](https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act), the data regulation in your region is when rather than an if. The common trend of to collect consent and allow users to opt-out<sup>3</sup>.
@@ -72,9 +71,9 @@ Alternatively, your developers will have to build this functionality in-house an
 My recommendation is to start the discussion with your legal teams to identify a potential consent and opt-out framework.
 
 ### Bookmarks:
-<sup>3</sup> [Adobe Audience Manager Opt-out Options (official documentation)](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)\
-<sup>3</sup> [Adobe Analytics Opt-out Options (official documentation)](https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html)
-<sup>4</sup> [Client-side help for GDPR (Adobe blog post)](https://medium.com/launch-by-adobe/client-side-help-for-gdpr-79e1cbcfc3c2)
+<sup>3</sup> [Adobe Audience Manager Opt-out Options (official documentation)](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)<br/>
+<sup>3</sup> [Adobe Analytics Opt-out Options (official documentation)](https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html)<br/>
+<sup>4</sup> [Client-side help for GDPR (Adobe blog post)](https://medium.com/launch-by-adobe/client-side-help-for-gdpr-79e1cbcfc3c2)<br/>
 
 
 Please let me know your questions or feedback for this and future posts in the comments.
