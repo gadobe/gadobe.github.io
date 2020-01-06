@@ -47,7 +47,7 @@ DTM has been around for years, this means that there might be redundant or legac
 ## 2. CName Tracking Server Implementation
 With all the changes to cross-domain tracking in the last 12 months by browsers such as Safari (ITP), CName tracking server implementations are a must.
 This is required to ensure that:
-* attribution are not affected
+* attribution is not affected
 * visitor metrics are persisted and not inflated
 * segmentation and personalisation is maintained
 
@@ -65,11 +65,16 @@ This is required to ensure that:
 [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation), [CCPA](https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act), the data regulation in your region is when rather than an if. The common trend of to collect consent and allow users to opt-out<sup>3</sup>.
 
 Adobe Launch can facilitate the implementation of three Consent Management extensions: Evidon, TrustArc, OneTrust.
+![image-center]({{ site.url }}/assets/images/001-adobe_launch_consent_management_extension.png){: .align-center}
+
+Alternatively, your developers will have to build this functionality in-house and decide when to trigger data collection based on the user consent<sup>4</sup>.
 
 My recommendation is to start the discussion with your legal teams to identify a potential consent and opt-out framework.
 
 ### Bookmarks:
 <sup>3</sup> [Adobe Audience Manager Opt-out Options (official documentation)](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)\
 <sup>3</sup> [Adobe Analytics Opt-out Options (official documentation)](https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html)
+<sup>4</sup> [Client-side help for GDPR (Adobe blog post)](https://medium.com/launch-by-adobe/client-side-help-for-gdpr-79e1cbcfc3c2)
+
 
 Please let me know your questions or feedback for this and future posts in the comments.
