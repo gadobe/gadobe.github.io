@@ -65,7 +65,7 @@ This is required to ensure that:
 [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation), [CCPA](https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act), the data regulation in your region is when rather than an if. The common trend of to collect consent and allow users to opt-out<sup>3</sup>.
 
 Adobe Launch can facilitate the implementation of three Consent Management extensions: Evidon, TrustArc, OneTrust.
-![image-center]({{ site.url }}/assets/images/001-adobe_launch_consent_management_extension.png){: .align-center}
+![image-center]({{ site.url }}/assets/images/posts/001-adobe_launch_consent_management_extension.png){: .align-center}
 
 Alternatively, your developers will have to build this functionality in-house and decide when to trigger data collection based on the user consent<sup>4</sup>.
 
