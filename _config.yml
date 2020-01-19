@@ -82,11 +82,11 @@ og_image                 : "/assets/images/bio-photo.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
+  type                   : Person # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - https://twitter.com/
-    - https://github.com/
+    - https://twitter.com/GarrettChungAU
+    - https://www.linkedin.com/in/garrettchung
 
 # Analytics
 analytics:

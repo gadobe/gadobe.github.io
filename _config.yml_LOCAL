@@ -16,7 +16,7 @@ title_separator          : "-"
 subtitle                 : "Martech, Adtech & CXM"
 name                     : "Garrett Chung"
 description              : "Experience Blog"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://www.garrettchung.com.au" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"/test"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -82,11 +82,11 @@ og_image                 : "/assets/images/bio-photo.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
+  type                   : Person # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-    - https://twitter.com/
-    - https://github.com/
+    - https://twitter.com/GarrettChungAU
+    - https://www.linkedin.com/in/garrettchung
 
 # Analytics
 analytics:
