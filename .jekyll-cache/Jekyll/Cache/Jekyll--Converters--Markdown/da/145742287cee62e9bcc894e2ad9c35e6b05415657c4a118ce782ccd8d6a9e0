@@ -1,5 +1,4 @@
-I"6<h1 id="adobe-2020-checklist">Adobe 2020 Checklist</h1>
-<p>This post contains a 3-item checklist to consider to comply and ideas to future-proof your Adobe implementations in 2020.</p>
+I"�<p>This post contains a 3-item checklist to consider to comply and ideas to future-proof your Adobe implementations in 2020.</p>
 
 <h2 id="1-dtm-update-to-adobe-launch">1. DTM Update to Adobe Launch</h2>
 <p>DTM sunset is on-going and the first milestone “new properties disabled” has passed. There are multiple guides floating around to facilitate the planning.</p>
@@ -44,7 +43,7 @@
 <p>With all the changes to cross-domain tracking in the last 12 months by browsers such as Safari (ITP), CName tracking server implementations are a must.
 This is required to ensure that:</p>
 <ul>
-  <li>attribution are not affected</li>
+  <li>attribution is not affected</li>
   <li>visitor metrics are persisted and not inflated</li>
   <li>segmentation and personalisation is maintained</li>
 </ul>
@@ -74,18 +73,22 @@ This is required to ensure that:</p>
 
 <h3 id="bookmarks-1">Bookmarks:</h3>
 <p><sup>1</sup> <a href="https://docs.adobe.com/content/help/en/id-service/using/reference/ecid-library-methods.html">Use ECID library and CNAME tracking to extend visitor ID expiration (official documentation)</a><br />
-<sup>2</sup> <a href="https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/implement-cname-support-in-target.html">CNAME and Adobe Target (official documentation)</a></p>
+<sup>2</sup> <a href="https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/implement-cname-support-in-target.html">CNAME and Adobe Target (official documentation)</a><br /></p>
 
 <h2 id="3-consent-management">3. Consent Management</h2>
 <p><a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a>, <a href="https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act">CCPA</a>, the data regulation in your region is when rather than an if. The common trend of to collect consent and allow users to opt-out<sup>3</sup>.</p>
 
-<p>Adobe Launch can facilitate the implementation of three Consent Management extensions: Evidon, TrustArc, OneTrust.</p>
+<p>Adobe Launch can facilitate the implementation of three Consent Management extensions: Evidon, TrustArc, OneTrust.
+<img src="http://localhost:4000/assets/images/posts/001-adobe_launch_consent_management_extension.png" alt="image-center" class="align-center" /></p>
+
+<p>Alternatively, your developers will have to build this functionality in-house and decide when to trigger data collection based on the user consent<sup>4</sup>.</p>
 
 <p>My recommendation is to start the discussion with your legal teams to identify a potential consent and opt-out framework.</p>
 
 <h3 id="bookmarks-2">Bookmarks:</h3>
 <p><sup>3</sup> <a href="https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html">Adobe Audience Manager Opt-out Options (official documentation)</a><br />
-<sup>3</sup> <a href="https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html">Adobe Analytics Opt-out Options (official documentation)</a></p>
+<sup>3</sup> <a href="https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html">Adobe Analytics Opt-out Options (official documentation)</a><br />
+<sup>4</sup> <a href="https://medium.com/launch-by-adobe/client-side-help-for-gdpr-79e1cbcfc3c2">Client-side help for GDPR (Adobe blog post)</a><br /></p>
 
 <p>Please let me know your questions or feedback for this and future posts in the comments.</p>
 :ET

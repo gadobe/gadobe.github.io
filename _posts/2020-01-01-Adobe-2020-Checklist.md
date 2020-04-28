@@ -3,6 +3,7 @@ title:  "Adobe 2020 Checklist"
 excerpt: "3-item checklist to consider to comply and future proof your Adobe implementations in 2020"
 search: true
 comments: true
+notice: true
 categories:
   - technical
   - dmp

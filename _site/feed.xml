@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-05T23:18:54+11:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Garrett Chung</title><subtitle>Experience Blog</subtitle><author><name>Garrett Chung</name></author><entry><title type="html">Adobe 2020 Checklist</title><link href="http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist/" rel="alternate" type="text/html" title="Adobe 2020 Checklist" /><published>2020-01-01T00:00:00+11:00</published><updated>2020-01-06T00:05:34+11:00</updated><id>http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist</id><content type="html" xml:base="http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist/">&lt;h1 id=&quot;adobe-2020-checklist&quot;&gt;Adobe 2020 Checklist&lt;/h1&gt;
-&lt;p&gt;This post contains a 3-item checklist to consider to comply and ideas to future-proof your Adobe implementations in 2020.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-28T23:29:47+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Garrett Chung</title><subtitle>Experience Blog</subtitle><author><name>Garrett Chung</name></author><entry><title type="html">Adobe 2020 Checklist</title><link href="http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist/" rel="alternate" type="text/html" title="Adobe 2020 Checklist" /><published>2020-01-01T00:00:00+11:00</published><updated>2020-01-06T00:05:34+11:00</updated><id>http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist</id><content type="html" xml:base="http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist/">&lt;p&gt;This post contains a 3-item checklist to consider to comply and ideas to future-proof your Adobe implementations in 2020.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-dtm-update-to-adobe-launch&quot;&gt;1. DTM Update to Adobe Launch&lt;/h2&gt;
 &lt;p&gt;DTM sunset is on-going and the first milestone “new properties disabled” has passed. There are multiple guides floating around to facilitate the planning.&lt;/p&gt;
@@ -44,7 +43,7 @@
 &lt;p&gt;With all the changes to cross-domain tracking in the last 12 months by browsers such as Safari (ITP), CName tracking server implementations are a must.
 This is required to ensure that:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;attribution are not affected&lt;/li&gt;
+  &lt;li&gt;attribution is not affected&lt;/li&gt;
   &lt;li&gt;visitor metrics are persisted and not inflated&lt;/li&gt;
   &lt;li&gt;segmentation and personalisation is maintained&lt;/li&gt;
 &lt;/ul&gt;
@@ -74,17 +73,21 @@ This is required to ensure that:&lt;/p&gt;
 
 &lt;h3 id=&quot;bookmarks-1&quot;&gt;Bookmarks:&lt;/h3&gt;
 &lt;p&gt;&lt;sup&gt;1&lt;/sup&gt; &lt;a href=&quot;https://docs.adobe.com/content/help/en/id-service/using/reference/ecid-library-methods.html&quot;&gt;Use ECID library and CNAME tracking to extend visitor ID expiration (official documentation)&lt;/a&gt;&lt;br /&gt;
-&lt;sup&gt;2&lt;/sup&gt; &lt;a href=&quot;https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/implement-cname-support-in-target.html&quot;&gt;CNAME and Adobe Target (official documentation)&lt;/a&gt;&lt;/p&gt;
+&lt;sup&gt;2&lt;/sup&gt; &lt;a href=&quot;https://docs.adobe.com/content/help/en/target/using/implement-target/before-implement/implement-cname-support-in-target.html&quot;&gt;CNAME and Adobe Target (official documentation)&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;3-consent-management&quot;&gt;3. Consent Management&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/General_Data_Protection_Regulation&quot;&gt;GDPR&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/California_Consumer_Privacy_Act&quot;&gt;CCPA&lt;/a&gt;, the data regulation in your region is when rather than an if. The common trend of to collect consent and allow users to opt-out&lt;sup&gt;3&lt;/sup&gt;.&lt;/p&gt;
 
-&lt;p&gt;Adobe Launch can facilitate the implementation of three Consent Management extensions: Evidon, TrustArc, OneTrust.&lt;/p&gt;
+&lt;p&gt;Adobe Launch can facilitate the implementation of three Consent Management extensions: Evidon, TrustArc, OneTrust.
+&lt;img src=&quot;http://localhost:4000/assets/images/posts/001-adobe_launch_consent_management_extension.png&quot; alt=&quot;image-center&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Alternatively, your developers will have to build this functionality in-house and decide when to trigger data collection based on the user consent&lt;sup&gt;4&lt;/sup&gt;.&lt;/p&gt;
 
 &lt;p&gt;My recommendation is to start the discussion with your legal teams to identify a potential consent and opt-out framework.&lt;/p&gt;
 
 &lt;h3 id=&quot;bookmarks-2&quot;&gt;Bookmarks:&lt;/h3&gt;
 &lt;p&gt;&lt;sup&gt;3&lt;/sup&gt; &lt;a href=&quot;https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html&quot;&gt;Adobe Audience Manager Opt-out Options (official documentation)&lt;/a&gt;&lt;br /&gt;
-&lt;sup&gt;3&lt;/sup&gt; &lt;a href=&quot;https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html&quot;&gt;Adobe Analytics Opt-out Options (official documentation)&lt;/a&gt;&lt;/p&gt;
+&lt;sup&gt;3&lt;/sup&gt; &lt;a href=&quot;https://docs.adobe.com/content/help/en/analytics/implementation/javascript-implementation/data-collection/opt-out.html&quot;&gt;Adobe Analytics Opt-out Options (official documentation)&lt;/a&gt;&lt;br /&gt;
+&lt;sup&gt;4&lt;/sup&gt; &lt;a href=&quot;https://medium.com/launch-by-adobe/client-side-help-for-gdpr-79e1cbcfc3c2&quot;&gt;Client-side help for GDPR (Adobe blog post)&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Please let me know your questions or feedback for this and future posts in the comments.&lt;/p&gt;</content><author><name>Garrett Chung</name></author><category term="adobe-analytics" /><category term="adobe-audience-manager" /><category term="adobe-target" /><category term="adobe-launch" /><category term="adobe-dtm" /><category term="ecid-experience-cloud-id-service" /><category term="cookies" /><category term="itp" /><summary type="html">3-item checklist to consider to comply and future proof your Adobe implementations in 2020</summary></entry></feed>

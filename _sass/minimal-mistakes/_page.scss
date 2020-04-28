@@ -249,7 +249,7 @@ body {
    Social sharing
    ========================================================================== */
 
-.page__share {
+.page__share .page__notice {
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid $border-color;
@@ -266,6 +266,16 @@ body {
       width: 1px;
     }
   }
+}
+
+.page__notice {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid $border-color;
+  font-style: italic;
+  font-size: .75em;
 }
 
 .page__share-title {
