@@ -113,7 +113,26 @@
 
 
     <script src="/assets/js/at2.3.js"></script>
-<script src='https://www.googletagservices.com/dcm/dcmads.js'></script>
+<script>
+
+  /*
+      document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
+        console.log("Request succeeded", e.detail);
+      });
+      */
+      var arrayToken = [];
+document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
+  console.log("AT Request succeeded", e.detail);
+  var tokens=e.detail.responseTokens;
+  for (var key in tokens) {
+    if (tokens.hasOwnProperty(key)) {
+        var tokenItem = tokens[key]["activity.id"] + ":" + tokens[key]["experience.id"];
+        arrayToken.push(tokenItem);
+    }
+  }
+  console.log('Event', event);
+});
+</script>
 
   </head>
 
@@ -169,57 +188,59 @@
 
 
     <div class="initial-content">
-      <div class="mboxDefault" style="height:250px;width:300px;background-color:powderblue;">
+      <script>
+adobe.target.getOffers({
+  request: {
+    prefetch: {
+      mboxes: [
+        {
+          index: 0,
+          name: "at2testing300x2501",
+          parameters: {
+            category: "drinks",
+            subcategory: "coffee"
+          }
+        },
+        {
+          index: 1,
+          name: "at2testing300x2502",
+          parameters: {
+            category: "drinks",
+            subcategory: "tea"
+          }
+        }
+      ]
+    }
+  }
+})
+.then(response => {
+  // get all mboxes from response
+  const mboxes = response.prefetch.mboxes;
+  let count = 1;
+  mboxes.forEach(el => {
+    adobe.target.applyOffers({
+      selector: "#container" + count,
+      response: {
+        prefetch: {
+          mboxes: [el]
+        }
+      }
+    });
+    count += 1;
+  });
+})
+.then(() => console.log("All mboxes applied"));
+</script>
+
+<div id="container1" style="height:250px;width:300px;background-color:powderblue;">
   default mbox 1
 </div>
-<script>
-  var el = document.currentScript.previousElementSibling;
-  adobe.target.getOffer({
-    mbox: "at2testing300x250",
-    params: {
-      category: "drinks",
-      subcategory: "coffee"
-    },
-    success: function(offer) {
-      adobe.target.applyOffer({
-        mbox: "at2testing300x250",
-        selector: el,
-        offer: offer
-      });
-    },
-    error: function(error) {
-      console.error(error);
-      el.style.visibility = "visible";
-    }
-  });
-</script>
-
 <p>ad tag served in AT mbox</p>
-<div class="mboxDefault" style="height:250px;width:300px;background-color:green;">
-  default mbox 2
+<div id="container2">
+<ins class="dcmads" style="display:inline-block;width:300px;height:250px" data-dcm-placement="N1262025.3421124ADOBEADCLOUD-DI/B24071122.273149705" data-dcm-rendering-mode="iframe" data-dcm-https-only="" data-dcm-resettable-device-id="" data-dcm-app-id="" data-dcm-click-tracker="${TM_CLICK_URL}">
+  <script src="https://www.googletagservices.com/dcm/dcmads.js"></script>
+</ins>
 </div>
-<script>
-  var el = document.currentScript.previousElementSibling;
-  adobe.target.getOffer({
-    mbox: "at2testing300x250-1",
-    params: {
-      category: "drinks",
-      subcategory: "tea"
-    },
-    success: function(offer) {
-      adobe.target.applyOffer({
-        mbox: "at2testing300x250",
-        selector: el,
-        offer: offer
-      });
-    },
-    error: function(error) {
-      console.error(error);
-      el.style.visibility = "visible";
-    }
-  });
-</script>
-
 
     </div>
 

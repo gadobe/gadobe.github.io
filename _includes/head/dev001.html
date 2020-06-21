@@ -1,2 +1,21 @@
 <script src="/assets/js/at2.3.js"></script>
-<script src='https://www.googletagservices.com/dcm/dcmads.js'></script>
+<script>
+
+  /*
+      document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
+        console.log("Request succeeded", e.detail);
+      });
+      */
+      var arrayToken = [];
+document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
+  console.log("AT Request succeeded", e.detail);
+  var tokens=e.detail.responseTokens;
+  for (var key in tokens) {
+    if (tokens.hasOwnProperty(key)) {
+        var tokenItem = tokens[key]["activity.id"] + ":" + tokens[key]["experience.id"];
+        arrayToken.push(tokenItem);
+    }
+  }
+  console.log('Event', event);
+});
+</script>
