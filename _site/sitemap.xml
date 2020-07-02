@@ -18,6 +18,9 @@
 <loc>http://localhost:4000/archive-layout-with-content/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/dev/at-meta</loc>
+</url>
+<url>
 <loc>http://localhost:4000/dev/at</loc>
 </url>
 <url>
@@ -28,6 +31,12 @@
 </url>
 <url>
 <loc>http://localhost:4000/categories/edge-case/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dev/gtm-aam-optin</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dev/gtm-aam-optout</loc>
 </url>
 <url>
 <loc>http://localhost:4000/dev/gtm</loc>

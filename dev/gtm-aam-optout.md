@@ -1,0 +1,42 @@
+---
+title: "gtm-aam-optout"
+permalink: /dev/gtm-aam-optout
+search: false
+layout: dev002
+---
+<script>
+digitalData = {
+    consent: "false",
+    page: {
+        pageInfo: {
+            pageID: "5093",
+            pageName: "Example page",
+            destinationURL: "https://example.com/index.html",
+            referringURL: "https://example.com/referrer.html",
+            sysEnv: "desktop",
+            variant: "2",
+            version: "1.14",
+            breadCrumbs: ["Home","Example group","Example page"],
+            author: "J Smith",
+            issueDate: "Example date",
+            effectiveDate: "Example date",
+            expiryData: "Example date",
+            language: "en-US",
+            geoRegion: "US",
+            industryCodes: "Example industry codes",
+            publisher: "Example publisher"
+        },
+        category: {
+            primaryCategory: "Example page category",
+            subCategory1: "Sub-category example"
+        },
+        attributes: {
+            country: "US",
+            language: "en-US"
+        }
+    }
+}
+
+</script>
+
+<p>GTM with opt-out</p>

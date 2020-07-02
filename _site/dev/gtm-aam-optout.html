@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>at - Garrett Chung</title>
+<!-- begin _includes/seo.html --><title>gtm-aam-optout - Garrett Chung</title>
 <meta name="description" content="Experience Blog">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Garrett Chung">
-<meta property="og:title" content="at">
-<meta property="og:url" content="http://localhost:4000/dev/at">
+<meta property="og:title" content="gtm-aam-optout">
+<meta property="og:url" content="http://localhost:4000/dev/gtm-aam-optout">
 
 
   <meta property="og:description" content="Experience Blog">
@@ -32,9 +32,9 @@
 
 
   <meta name="twitter:site" content="@GarrettChungAU">
-  <meta name="twitter:title" content="at">
+  <meta name="twitter:title" content="gtm-aam-optout">
   <meta name="twitter:description" content="Experience Blog">
-  <meta name="twitter:url" content="http://localhost:4000/dev/at">
+  <meta name="twitter:url" content="http://localhost:4000/dev/gtm-aam-optout">
 
   
     <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/dev/at">
+<link rel="canonical" href="http://localhost:4000/dev/gtm-aam-optout">
 
 
 
@@ -112,31 +112,17 @@
 
 
 
-    <script src="/assets/js/at2.3.js"></script>
-<script>
-
-  /*
-      document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
-        console.log("Request succeeded", e.detail);
-      });
-      */
-      var arrayToken = [];
-document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
-  console.log("AT Request succeeded", e.detail);
-  var tokens=e.detail.responseTokens;
-  for (var key in tokens) {
-    if (tokens.hasOwnProperty(key)) {
-        var tokenItem = tokens[key]["activity.id"] + ":" + tokens[key]["experience.id"];
-        arrayToken.push(tokenItem);
-    }
-  }
-  console.log('Event', event);
-});
-</script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TRLX2K');</script>
+<!-- End Google Tag Manager -->
 
   </head>
 
-  <body class="layout--dev001">
+  <body class="layout--dev002">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -189,59 +175,41 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
     <div class="initial-content">
       <script>
-adobe.target.getOffers({
-  request: {
-    prefetch: {
-      mboxes: [
-        {
-          index: 0,
-          name: "at2testing300x2501",
-          parameters: {
-            category: "drinks",
-            subcategory: "coffee"
-          }
+digitalData = {
+    consent: "false",
+    page: {
+        pageInfo: {
+            pageID: "5093",
+            pageName: "Example page",
+            destinationURL: "https://example.com/index.html",
+            referringURL: "https://example.com/referrer.html",
+            sysEnv: "desktop",
+            variant: "2",
+            version: "1.14",
+            breadCrumbs: ["Home","Example group","Example page"],
+            author: "J Smith",
+            issueDate: "Example date",
+            effectiveDate: "Example date",
+            expiryData: "Example date",
+            language: "en-US",
+            geoRegion: "US",
+            industryCodes: "Example industry codes",
+            publisher: "Example publisher"
         },
-        {
-          index: 1,
-          name: "at2testing300x2502",
-          parameters: {
-            category: "drinks",
-            subcategory: "tea"
-          }
+        category: {
+            primaryCategory: "Example page category",
+            subCategory1: "Sub-category example"
+        },
+        attributes: {
+            country: "US",
+            language: "en-US"
         }
-      ]
     }
-  }
-})
-.then(response => {
-  // get all mboxes from response
-  const mboxes = response.prefetch.mboxes;
-  let count = 1;
-  mboxes.forEach(el => {
-    adobe.target.applyOffers({
-      selector: "#container" + count,
-      response: {
-        prefetch: {
-          mboxes: [el]
-        }
-      }
-    });
-    count += 1;
-  });
-})
-.then(() => console.log("All mboxes applied"));
+}
+
 </script>
 
-<p>ad tag returned in AT mbox</p>
-<div id="container1" style="height:250px;width:300px;background-color:powderblue;">
-  default mbox 1
-</div>
-<p>ad tag as default html in AT div</p>
-<div id="container2">
-<ins class="dcmads" style="display:inline-block;width:300px;height:250px" data-dcm-placement="N1262025.3421124ADOBEADCLOUD-DI/B24071122.273149705" data-dcm-rendering-mode="iframe" data-dcm-https-only="" data-dcm-resettable-device-id="" data-dcm-app-id="" data-dcm-click-tracker="${TM_CLICK_URL}">
-  <script src="https://www.googletagservices.com/dcm/dcmads.js"></script>
-</ins>
-</div>
+<p>GTM with opt-in</p>
 
     </div>
 
