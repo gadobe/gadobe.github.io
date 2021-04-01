@@ -1,4 +1,4 @@
-I"ð<script>
+I"ñ<script>
 digitalData = {
     consent: "false",
     page: {
@@ -33,5 +33,5 @@ digitalData = {
 
 </script>
 
-<p>GTM with opt-in</p>
+<p>GTM with opt-out</p>
 :ET

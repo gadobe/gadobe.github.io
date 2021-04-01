@@ -1,4 +1,4 @@
-I"À/<p>A list of all the posts and pages found on the site. For you robots out there is an <a href="/sitemap.xml">XML version</a> available for digesting as well.</p>
+I"2<p>A list of all the posts and pages found on the site. For you robots out there is an <a href="/sitemap.xml">XML version</a> available for digesting as well.</p>
 
 <h2>Pages</h2>
 
@@ -48,6 +48,32 @@
     <h2 class="archive__item-title" itemprop="headline">
       
         <a href="/archive-layout-with-content/" rel="permalink">Archive Layout with Content</a>
+      
+    </h2>
+    
+    
+  </article>
+</div>
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/dev/at-getOffer" rel="permalink">at-meta</a>
+      
+    </h2>
+    
+    
+  </article>
+</div>
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/dev/at-lib" rel="permalink">at-meta</a>
       
     </h2>
     
@@ -164,7 +190,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/" rel="permalink"></a>
+        <a href="/" rel="permalink">Home</a>
       
     </h2>
     

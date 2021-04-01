@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>at - Garrett Chung</title>
+<!-- begin _includes/seo.html --><title>at-meta - Garrett Chung</title>
 <meta name="description" content="Experience Blog">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Garrett Chung">
-<meta property="og:title" content="at">
-<meta property="og:url" content="http://localhost:4000/dev/at">
+<meta property="og:title" content="at-meta">
+<meta property="og:url" content="http://localhost:4000/dev/at-getOffer">
 
 
   <meta property="og:description" content="Experience Blog">
@@ -32,9 +32,9 @@
 
 
   <meta name="twitter:site" content="@GarrettChungAU">
-  <meta name="twitter:title" content="at">
+  <meta name="twitter:title" content="at-meta">
   <meta name="twitter:description" content="Experience Blog">
-  <meta name="twitter:url" content="http://localhost:4000/dev/at">
+  <meta name="twitter:url" content="http://localhost:4000/dev/at-getOffer">
 
   
     <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/dev/at">
+<link rel="canonical" href="http://localhost:4000/dev/at-getOffer">
 
 
 
@@ -225,91 +225,39 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function (e) {
 
     <div class="initial-content">
       <script>
-function createTokens(options) {
-  return options.map(e => e.eventToken);
-}
-
-function createNotification(mbox, type, tokens) {
-  const id = 11111; // here we should use a random ID like UUID
-  const timestamp = Date.now();
-  const { name, state, parameters, profileParameters, order, product } = mbox;
-  const result = {
-    id,
-    type,
-    timestamp,
-    parameters,
-    profileParameters,
-    order,
-    product
-  };
-
-  result.mbox = { name, state };
-  result.tokens = tokens;
-
-  return result;
-}
-adobe.target.getOffers({
-  request: {
-    prefetch: {
-      mboxes: [
-        {
-          index: 0,
-          name: "at2testing300x2501",
-          parameters: {
-            category: "drinks",
-            subcategory: "coffee"
-          }
-        },
-        {
-          index: 1,
-          name: "at2testing300x2502",
-          parameters: {
-            category: "drinks",
-            subcategory: "tea"
-          }
-        }
-      ]
+    function goDoSomething(d){
+        alert(d.getAttribute("stitch-id"));
     }
-  }
-})
-.then(response => {
-  // get all mboxes from response
-  const mboxes = response.prefetch.mboxes;
-  const notifications = mboxes.map(mbox => {
-    const type = "display";
-    const tokens = createTokens(mbox.options);
-
-    return createNotification(mbox, type, tokens);
-  });
-
-  adobe.target.sendNotifications({
-    request: { notifications }
-  });
-  let count = 1;
-  mboxes.forEach(el => {
-    adobe.target.applyOffers({
-      selector: "#container" + count,
-      response: {
-        prefetch: {
-          mboxes: [el]
-        }
-      }
-    });
-    count += 1;
-  });
-})
-.then(() => console.log("All mboxes applied"));
 </script>
 
-<p>ad tag returned in AT mbox</p>
+<script>
+adobe.target.getOffer({   
+  "mbox": "ww-sm.web.search.banner",
+  "params": {
+     "SearchKeyword": "a2-milk",
+     "at_property": "517215df-9ce4-b49c-557d-0fd48965740a"
+  },
+  "success": function(offer) {
+        adobe.target.applyOffer( {  
+           "mbox": "ww-sm.web.search.banner",
+           "selector": "#container1",
+           "offer": offer  
+        } );
+  },   
+  "error": function(status, error) {           
+      console.log('Error', status, error);
+  }
+});
+</script>
+
+<p>ww-sm.web.search.banner</p>
 <div id="container1" style="height:250px;width:300px;background-color:powderblue;">
   default mbox 1
 </div>
-<p>ad tag as default html in AT div</p>
-<div id="container2">
-<ins class="dcmads" style="display:inline-block;width:300px;height:250px" data-dcm-placement="N1262025.3421124ADOBEADCLOUD-DI/B24071122.273149705" data-dcm-rendering-mode="iframe" data-dcm-https-only="" data-dcm-resettable-device-id="" data-dcm-app-id="" data-dcm-click-tracker="${TM_CLICK_URL}">
-  <script src="https://www.googletagservices.com/dcm/dcmads.js"></script>
-</ins>
+
+<p>ww-sm.web.search.contentcard</p>
+<div id="container2" style="height:250px;width:300px;background-color:green;">
+  default mbox 2
 </div>
 
     </div>

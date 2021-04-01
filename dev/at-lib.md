@@ -1,9 +1,14 @@
-I"—<script>
+---
+title: "at-meta"
+permalink: /dev/at-lib
+search: false
+layout: dev003
+---
+<script>
     function goDoSomething(d){
-        alert(d.getAttribute("data-xf"));
+        alert(d.getAttribute("stitch-id"));
     }
 </script>
-
 <script>
 adobe.target.getOffers({
   request: {
@@ -20,7 +25,7 @@ adobe.target.getOffers({
           index: 1,
           name: "ww-sm.web.search.contentcard",
           parameters: {
-            SearchKeyword: "nomatch"
+            SearchKeyword: "milk"
           }
         }
       ]
@@ -55,4 +60,3 @@ adobe.target.getOffers({
 <div id="container2" style="height:250px;width:300px;background-color:green;">
   default mbox 2
 </div>
-:ET

@@ -116,8 +116,44 @@
 
 
 
-    <!-- start custom head snippets -->
+    <script src="//assets.adobedtm.com/launch-EN2c9c8219e12c4acc94e012a211c679ca-development.min.js" async></script>
+<script>
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  window.adobeDataLayer.push({
+    "web": {
+      "webPageDetails": {
+          "Name": "Adobe 2020 Checklist",
+          "URL": "http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist/",
+           "Categories": ["technical","dmp","data","analytics","implementation"], 
+           "Tags": ["adobe-analytics","adobe-audience-manager","adobe-target","adobe-launch","adobe-dtm","ecid-experience-cloud-id-service","cookies","itp"], 
+          //"Categories": "technical,dmp,data,analytics,implementation",
+          //"Tags": ["adobe-analytics","adobe-audience-manager","adobe-target","adobe-launch","adobe-dtm","ecid-experience-cloud-id-service","cookies","itp"]
+      }
+    },
+    "_id": "/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist",
+    "event": "page_load"
+  });
 
+function trackComment (comment) {
+      alert(comment.id);
+      alert(comment.text);
+      window.adobeDataLayer.push({
+        "web": {
+          "webPageDetails": {
+              "Comments": {
+                "id": comment.id,
+                "text": comment.text
+              }
+          }
+        },
+        "_id": "/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist",
+        "event": "comment_post"
+      });
+}
+
+</script>
+
+    <!-- start custom head snippets -->
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -685,7 +721,7 @@ Before making any changes to your implementation, you should consult your Adobe 
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2020 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -709,6 +745,7 @@ Before making any changes to your implementation, you should consult your Adobe 
     var disqus_config = function () {
       this.page.url = "http://localhost:4000/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist/";  // Replace PAGE_URL with your page's canonical URL variable
       this.page.identifier = "/technical/dmp/data/analytics/implementation/Adobe-2020-Checklist"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.callbacks.onNewComment = [function(comment) { trackComment(comment); }];
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');

@@ -5,6 +5,29 @@ search: false
 layout: dev001
 ---
 <script>
+function createTokens(options) {
+  return options.map(e => e.eventToken);
+}
+
+function createNotification(mbox, type, tokens) {
+  const id = 11111; // here we should use a random ID like UUID
+  const timestamp = Date.now();
+  const { name, state, parameters, profileParameters, order, product } = mbox;
+  const result = {
+    id,
+    type,
+    timestamp,
+    parameters,
+    profileParameters,
+    order,
+    product
+  };
+
+  result.mbox = { name, state };
+  result.tokens = tokens;
+
+  return result;
+}
 adobe.target.getOffers({
   request: {
     prefetch: {
@@ -32,6 +55,16 @@ adobe.target.getOffers({
 .then(response => {
   // get all mboxes from response
   const mboxes = response.prefetch.mboxes;
+  const notifications = mboxes.map(mbox => {
+    const type = "display";
+    const tokens = createTokens(mbox.options);
+
+    return createNotification(mbox, type, tokens);
+  });
+
+  adobe.target.sendNotifications({
+    request: { notifications }
+  });
   let count = 1;
   mboxes.forEach(el => {
     adobe.target.applyOffers({

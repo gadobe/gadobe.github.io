@@ -47,7 +47,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-07-02T16:30:28+10:00">
+  <meta property="article:published_time" content="2021-04-01T21:33:08+11:00">
 
 
 
@@ -116,8 +116,44 @@
 
 
 
-    <!-- start custom head snippets -->
+    <script src="//assets.adobedtm.com/launch-EN2c9c8219e12c4acc94e012a211c679ca-development.min.js" async></script>
+<script>
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  window.adobeDataLayer.push({
+    "web": {
+      "webPageDetails": {
+          "Name": "Introduction to Adobe IO",
+          "URL": "http://localhost:4000/adobeio/introduction-to-adobe-io/",
+           "Categories": [], 
+           "Tags": [], 
+          //"Categories": "",
+          //"Tags": []
+      }
+    },
+    "_id": "/adobeio/introduction",
+    "event": "page_load"
+  });
 
+function trackComment (comment) {
+      alert(comment.id);
+      alert(comment.text);
+      window.adobeDataLayer.push({
+        "web": {
+          "webPageDetails": {
+              "Comments": {
+                "id": comment.id,
+                "text": comment.text
+              }
+          }
+        },
+        "_id": "/adobeio/introduction",
+        "event": "comment_post"
+      });
+}
+
+</script>
+
+    <!-- start custom head snippets -->
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -316,7 +352,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Introduction to Adobe IO">
     <meta itemprop="description" content="What is Adobe IO?">
-    <meta itemprop="datePublished" content="July 02, 2020">
+    <meta itemprop="datePublished" content="April 01, 2021">
     <meta itemprop="dateModified" content="August 20, 2019">
 
     <div class="page__inner-wrap">
@@ -634,7 +670,7 @@ The default files are read-in automatically via the <a href="https://github.com/
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2020 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -1,14 +1,9 @@
----
-title: "at-meta"
-permalink: /dev/at-meta
-search: false
-layout: dev001
----
-<script>
+I"–<script>
     function goDoSomething(d){
         alert(d.getAttribute("stitch-id"));
     }
 </script>
+
 <script>
 adobe.target.getOffers({
   request: {
@@ -60,3 +55,4 @@ adobe.target.getOffers({
 <div id="container2" style="height:250px;width:300px;background-color:green;">
   default mbox 2
 </div>
+:ET

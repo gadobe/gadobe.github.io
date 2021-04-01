@@ -18,6 +18,12 @@
 <loc>http://localhost:4000/archive-layout-with-content/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/dev/at-getOffer</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dev/at-lib</loc>
+</url>
+<url>
 <loc>http://localhost:4000/dev/at-meta</loc>
 </url>
 <url>

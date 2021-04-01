@@ -132,6 +132,42 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
   }
   console.log('Event', event);
 });
+
+document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function (e) {
+    window.ttMETA= typeof(window.ttMETA)!="undefined" ? window.ttMETA : [];
+    var tokens=e.detail.responseTokens;
+    if (isEmpty(tokens)) {
+      return;
+    }
+    var uniqueTokens = distinct(tokens);
+    uniqueTokens.forEach(function(token) {
+      window.ttMETA.push({
+        'CampaignName': token["activity.name"],
+        'CampaignId' : token["activity.id"],
+        'RecipeName': token["experience.name"],
+        'RecipeId': token["experience.id"],
+        'OfferId': token["option.id"],
+        'OfferName': token["option.name"],
+        'MboxName': e.detail.mbox});
+      console.log(ttMETA);
+    });
+  });
+  function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+  }
+  function key(obj) {
+     return Object.keys(obj)
+    .map(function(k) { return k + "" + obj[k]; })
+    .join("");
+  }
+  function distinct(arr) {
+    var result = arr.reduce(function(acc, e) {
+      acc[key(e)] = e;
+      return acc;
+    }, {});
+    return Object.keys(result)
+    .map(function(k) { return result[k]; });
+  }
 </script>
 
   </head>
@@ -238,7 +274,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2020 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

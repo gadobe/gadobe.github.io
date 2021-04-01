@@ -112,8 +112,44 @@
 
 
 
-    <!-- start custom head snippets -->
+    <script src="//assets.adobedtm.com/launch-EN2c9c8219e12c4acc94e012a211c679ca-development.min.js" async></script>
+<script>
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  window.adobeDataLayer.push({
+    "web": {
+      "webPageDetails": {
+          "Name": "Page Not Found",
+          "URL": "http://localhost:4000/404.html",
+          
+          
+          //"Categories": "",
+          //"Tags": null
+      }
+    },
+    "_id": "",
+    "event": "page_load"
+  });
 
+function trackComment (comment) {
+      alert(comment.id);
+      alert(comment.text);
+      window.adobeDataLayer.push({
+        "web": {
+          "webPageDetails": {
+              "Comments": {
+                "id": comment.id,
+                "text": comment.text
+              }
+          }
+        },
+        "_id": "",
+        "event": "comment_post"
+      });
+}
+
+</script>
+
+    <!-- start custom head snippets -->
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -429,7 +465,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2020 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Garrett Chung. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

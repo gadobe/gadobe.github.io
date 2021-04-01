@@ -1,0 +1,36 @@
+<script src="//assets.adobedtm.com/launch-EN2c9c8219e12c4acc94e012a211c679ca-development.min.js" async></script>
+<script>
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  window.adobeDataLayer.push({
+    "web": {
+      "webPageDetails": {
+          "Name": "{{ page.title }}",
+          "URL": "{{ site.url }}{{ page.url }}",
+          {% if page.categories %} "Categories": {{ page.categories | jsonify }}, {% endif %}
+          {% if page.tags %} "Tags": {{ page.tags | jsonify }}, {% endif %}
+          //"Categories": "{{ page.categories | join: ',' }}",
+          //"Tags": {{ page.tags | jsonify }}
+      }
+    },
+    "_id": "{{ page.id }}",
+    "event": "page_load"
+  });
+
+function trackComment (comment) {
+      alert(comment.id);
+      alert(comment.text);
+      window.adobeDataLayer.push({
+        "web": {
+          "webPageDetails": {
+              "Comments": {
+                "id": comment.id,
+                "text": comment.text
+              }
+          }
+        },
+        "_id": "{{ page.id }}",
+        "event": "comment_post"
+      });
+}
+
+</script>
